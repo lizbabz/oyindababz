@@ -1357,41 +1357,7 @@ nav {
   box-shadow: 0 8px 24px rgba(196, 95, 67, 0.3);
 }
 
-/* FOOTER */
-footer {
-  background-color: var(--espresso);
-  border-top: 1px solid var(--dark-border);
-  padding: 3rem 4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.85rem;
-}
 
-.footer-brand {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.35rem;
-  color: #FFFFFF;
-}
-
-.footer-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-
-.footer-links a {
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-  font-size: 0.76rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.footer-links a:hover {
-  color: var(--rose-gold);
-}
 
 /* RESPONSIVE */
 /* HAMBURGER ANIMATION */
@@ -1563,17 +1529,7 @@ footer {
   .form-input, .form-select, .form-textarea {
     font-size: 16px;
   }
-  footer {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-    padding: 3rem 1.5rem;
-  }
-  .footer-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.2rem;
-  }
+  
 }
 
 @media (max-width: 480px) {
@@ -1593,6 +1549,156 @@ footer {
     font-size: 2.7rem;
   }
 }
+
+/* FOOTER STYLES */
+.site-footer {
+  background-color: #140721 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4.5rem 2rem 3rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.88rem;
+}
+.footer-wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.footer-brand {
+  max-width: 400px;
+}
+.footer-title {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+.footer-handle {
+  display: inline-block;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #D4A373;
+  margin-top: 0.25rem;
+  font-weight: 600;
+}
+.footer-tagline {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.6rem;
+  line-height: 1.6;
+}
+.footer-nav {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.footer-nav a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+.footer-nav a:hover {
+  color: #E2847A;
+}
+.footer-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 2.5rem 0 2rem;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer-copy {
+  line-height: 1.5;
+}
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-socials a {
+  color: #D4A373;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.2s ease;
+}
+.footer-socials a:hover {
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 3.5rem 1.25rem 2.5rem !important;
+  }
+  .footer-main {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+  .footer-brand {
+    max-width: 100%;
+  }
+  .footer-title {
+    font-size: 1.45rem;
+  }
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.1rem;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-nav li {
+    display: inline-block;
+  }
+  .footer-nav a {
+    font-size: 0.78rem;
+    padding: 0.2rem 0.4rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+    align-items: center;
+    width: 100%;
+  }
+  .footer-copy {
+    font-size: 0.78rem;
+    max-width: 320px;
+  }
+  .footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem 1.2rem;
+    width: 100%;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2093,20 +2199,38 @@ footer {
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-brand">
-    <strong>Oyindamola Babatunde</strong> &middot; <span style="font-size:0.95rem;color:rgba(255,255,255,0.7)">Oyinda Babz</span>
+<footer class="site-footer">
+  <div class="footer-wrap">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="footer-title">Oyindamola Babatunde</span>
+        <span class="footer-handle">Oyinda Babz</span>
+        <p class="footer-tagline">Community Architect &middot; Keynote Speaker &middot; Lifestyle Catalyst</p>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#pillars">Philosophy</a></li>
+        <li><a href="#speaking">Speaking</a></li>
+        <li><a href="#movement">Busy Mamas</a></li>
+        <li><a href="#podcast">Podcast</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#inquiry">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-divider"></div>
+    
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        &copy; 2026 Oyindamola Babatunde. All Rights Reserved. Edmonton, Alberta, Canada.
+      </div>
+      <div class="footer-socials">
+        <a href="https://instagram.com/oyindababz" target="_blank" rel="noopener">Instagram &rarr;</a>
+        <a href="https://tiktok.com/@oyindababz" target="_blank" rel="noopener">TikTok &rarr;</a>
+        <a href="https://www.busymamasnetwork.com" target="_blank" rel="noopener">Busy Mamas Network &rarr;</a>
+      </div>
+    </div>
   </div>
-  <div>
-    &copy; 2026 Oyindamola Babatunde. All Rights Reserved. Edmonton, Alberta, Canada.
-  </div>
-  <ul class="footer-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#speaking">Speaking</a></li>
-    <li><a href="#movement">Busy Mamas</a></li>
-    <li><a href="https://www.busymamasnetwork.com" target="_blank" rel="noopener">Community</a></li>
-    <li><a href="#inquiry">Contact</a></li>
-  </ul>
 </footer>
 
 <script>
